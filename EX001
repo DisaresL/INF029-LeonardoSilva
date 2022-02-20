@@ -1,0 +1,8 @@
+include <stdio.h>
+
+int main()
+{
+    printf("Leonardo Bruno de Almeida Silva\n20212160003\n2021.2");
+
+    return 0;
+}
