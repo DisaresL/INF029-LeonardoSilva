@@ -1,0 +1,15 @@
+#include <stdio.h>
+int n, f,  cont;
+
+int main()
+{
+    printf("Digite um numero para saber seu fatorial:\n");
+    scanf("%d", &n);
+    f = n;
+    while(n>1){
+        f = f * (n-1);
+        n--;
+    }
+    printf("O fatorial é: %d", f);
+    return 0;
+}
