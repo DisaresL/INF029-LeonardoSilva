@@ -1,0 +1,18 @@
+#include <stdio.h>
+int a, b, c;
+
+int main()
+{
+    printf("Digite O valor de A:\n");
+    scanf("%d", &a);
+    printf("DIgite o valor de B:\n");
+    scanf("%d", &b);
+    printf("A = %d\n", a);
+    printf("B = %d\n", b);
+    c = a;
+    a = b;
+    b = c;
+    printf("Invertendo temos: A = %d e B = %d", a, b);
+
+    return 0;
+}
