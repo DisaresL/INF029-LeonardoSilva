@@ -5,6 +5,17 @@
 int dia_nasc, mes_nasc, ano_nasc, i;
 char cpf[12], nome[50], sexo;
 
+int check_nome(char nome[50]){
+  int len = strlen(nome);
+  if (len<20){
+    i = 0;
+  }
+  else{
+    printf("Nome maior que 20 caracteres.\n");
+    i = -1;
+  }
+}
+
 int check_sexo (char sexo){
     if(sexo == (('f')||('F')||('m')||('M')||('o')||('O'))){
         i = 0;
@@ -72,6 +83,8 @@ int check_cpf(char cpf[12]){
 }
 
 int cadastrarcliente(){
+  i = -1;
+  do{
     printf("Digite o nome do cliente:\n");
     fgets(nome, 50, stdin);
     int len = strlen(nome) - 1;
@@ -82,6 +95,7 @@ int cadastrarcliente(){
     }
     getchar;
     fflush;
+    }while(i=-1);
     i = -1;
     do{
         printf("Digite A data de nascimento:\n");
