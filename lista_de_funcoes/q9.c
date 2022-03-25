@@ -93,6 +93,7 @@ int cadastrarcliente(){
             nome[i]=='0';
         }
     }
+    check_nome(nome);
     getchar;
     fflush;
     }while(i=-1);
