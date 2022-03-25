@@ -18,3 +18,4 @@ int main()
     printf("%c, %c, %c.", letra1, letra2, letra3);
 
     return 0;
+  }

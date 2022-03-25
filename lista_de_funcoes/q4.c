@@ -1,4 +1,4 @@
-Q4
+//Q4
 #include<stdio.h>
 int i, numeros[3];
 
