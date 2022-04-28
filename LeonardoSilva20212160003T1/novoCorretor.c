@@ -52,7 +52,6 @@ void testQ1(){
   strcpy(str,"1/12/19");
   printf("%d\n",q1(str));
 }
-
 void testQ2(){
   char datainicial[11], datafinal[11];
   int qtdDias, qtdMeses, qtdAnos;
