@@ -84,7 +84,9 @@ DataQuebrada quebraData(char data[]){
 
 	if(i == 2 || i == 4){
 		sAno[i] = '\0';
-	}else {
+	}
+  else
+  {
 		dq.valido = 0;
     return dq;
   }
@@ -96,7 +98,9 @@ DataQuebrada quebraData(char data[]){
   aa = dq.iAno;
   if (dq.iDia == 0 || dq.iMes == 0 || dq.iAno == 0){
     dq.valido = 0;
-  }else{
+  }
+  else
+  {
     dq.valido = valida_data(dq.iDia, dq.iMes, dq.iAno);
   }  
   resposta = dq.valido;
@@ -150,15 +154,15 @@ int difdma(){
   DiasMesesAnos dma;
   if(didia <= dfdia){
     difdia = dfdia - didia;
-  }else
-  {
+  }
+  else{
     difdia = 30 - (didia - dfdia);
     dfmes --;
   }
    if(dimes <= dfmes){
       difmes = dfmes - dimes;
-  }else
-   {
+  }
+   else{
       difmes = 12 - (dimes - dfmes);
       dfano--;
   }
@@ -183,7 +187,7 @@ DiasMesesAnos q2(char datainicial[], char datafinal[])
     dma.retorno = 3;
     return dma;
   //verifique se a data final não é menor que a data inicial
-  } else if (validadma() == 0){
+  }else if (validadma() == 0){
     dma.retorno = 4;
     return dma;
   }else if (validadma() == 1){
@@ -275,21 +279,21 @@ int q3(char *texto, char c, int isCaseSensitive){
         O retorno da função, n, nesse caso seria 1;
  */
 int buscarPalavra(char *strTexto, char *strBusca, int posicoes[30]){ 
-  int tamTexto, tamBusca, contTexto = 0, v = 0, x = 0;
-  tamTexto = strlen(strTexto);
-  tamBusca = strlen(strBusca);
-  for (int i = 0; i < tamTexto; i++){
+  int txttam, busctam, txtcont = 0, v = 0, x = 0;
+  txttam = strlen(strTexto);
+  busctam = strlen(strBusca);
+  for (int i = 0; i < txttam; i++){
     if (strTexto[i] == strBusca[0]){      
-      for (x = 0; x < tamBusca; x++){
+      for (x = 0; x < busctam; x++){
         if (strTexto[i+x] == strBusca[x]){
-          contTexto++;
+          txtcont++;
         }
         else{
-          contTexto = 0;
-          x = tamBusca;
+          txtcont = 0;
+          x = busctam;
         }        
       }
-      if (contTexto == (tamBusca)){
+      if (txtcont == (busctam)){
         if (v == 0){
           posicoes[v] = (i + 1);
           v++;
@@ -300,7 +304,7 @@ int buscarPalavra(char *strTexto, char *strBusca, int posicoes[30]){
           v++;
           posicoes[v] = (i + x);
         }        
-        contTexto = 0;
+        txtcont = 0;
         i += (x - 1);
       }
     }
@@ -371,7 +375,7 @@ int q5(int num)
     Quantidade de vezes que número de busca ocorre em número base
  */
 int buscar(int numerobase, int numerobusca){ 
-  int x= 0, u = 0, pot;
+  int x = 0, pot, u = 0;
   for (int i = 0; i <= x; i++){
     if (numerobase >= pow(10.0,i)){
       x++;
@@ -399,13 +403,13 @@ int buscar(int numerobase, int numerobusca){
     k++;
   }
   int contGeral = 0, contxx = 0, a = 0;
-  for (int w = 0; w < x; w++){
-    if (vbas[w] == vbusc[0]){
+  for (int r = 0; r < x; r++){
+    if (vbas[r] == vbusc[0]){
       if (y == 1){
         contGeral++;
       }else if (y > 1){
         for (a = 1; a < y; a++){
-          if (vbas[w+a] == vbusc[a]){
+          if (vbas[r+a] == vbusc[a]){
             contxx++;
           }
           else{
@@ -415,7 +419,7 @@ int buscar(int numerobase, int numerobusca){
         if (contxx == (y - 1)){
           contGeral++;
           contxx = 0;
-          w += (a - 1);
+          r += (a - 1);
         }
       }  
     }      

@@ -32,7 +32,7 @@ void testQ1(){
 
   char str[11];
   strcpy(str,"29/02/2015");
-  printf("%d  teste\n",q1(str));
+  printf("%d\n",q1(str));
   strcpy(str,"29/02/2012");
   printf("%d\n",q1(str));
   strcpy(str,"9/13/2014");
